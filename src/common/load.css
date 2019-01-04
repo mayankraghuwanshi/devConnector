@@ -1,0 +1,41 @@
+.load-box{
+    width: 50%;
+}
+.boxline{
+    height: 12px;
+    margin: 10px;
+    animation: pulse 1s infinite ease-in-out ;
+}
+.load-box div:nth-child(1){
+    width: 300px;
+}
+.load-box div:nth-child(2){
+    width: 180px;
+}
+.load-box div:nth-child(3){
+    width: 290px;
+}
+.load-box div:nth-child(4){
+    width: 400px;
+}
+.load-box div:nth-child(5){
+    width: 50px;
+}
+
+@keyframes pulse{
+    0%{
+        background-color: rgba(165,165,165,.1);
+    }
+    25%{
+        background-color: rgba(165,165,165,.2);
+    }
+    50%{
+        background-color: rgba(165,165,165,.3);
+    }
+    75%{
+    background-color: rgba(165,165,165,.3);
+    }
+    100%{
+    background-color: rgba(165,165,165,.1);
+    }
+    }
