@@ -86,6 +86,23 @@ export const getAllProfiles = ()=>dispatch=>{
         }))
 }
 
+export const getProfileByHandle = (handle)=>dispatch=>{
+    dispatch({
+        type : PROFILE_LOADING
+    })
+    axios.get(`http://localhost:3500/api/profile/handle/${handle}`)
+        .then(res=>dispatch({
+            type: GET_PROFILE,
+            payload : res.data
+        }))
+        .catch(err=>dispatch({
+            type : GET_PROFILE,
+            payload: null
+        }))
+}
+
+
+
 
 export const createProfile = (newData , history)=>dispatch=>{
     axios.post('http://localhost:3500/api/profile' , newData)

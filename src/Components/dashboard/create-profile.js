@@ -21,6 +21,7 @@ class CreateProfile extends Component {
         bio : "" ,
         youtube : "",
         instagram : "",
+        linkedin : "",
         githubusername : "",
         errors : {}
 
@@ -40,6 +41,8 @@ class CreateProfile extends Component {
              facebook:this.state.facebook,
              instagram:this.state.instagram,
              githubusername:this.state.githubusername,
+            youtube : this.state.youtube,
+            linkedin : this.state.linkedin,
              bio:this.state.bio}
              this.props.createProfile(newData , this.props.history)
 
@@ -62,21 +65,33 @@ class CreateProfile extends Component {
              linkName="fab fa-youtube"
              type = "text"
              name = "youtube"
+             value={this.state.youtube}
+             onChange = {this.onChange}
+             errors = {this.state.errors.youtube}
              placeholder="YouTube Channel URL"/>
              <OptionList
              linkName="fab fa-linkedin"
              name = "fab fa-linkedin"
              type = "text"
+             value={this.state.linkedin}
+             onChange = {this.onChange}
+             errors = {this.state.errors.linkedin}
              placeholder="Linkedin URL"/>
              <OptionList
              linkName="fab fa-facebook"
              name = "facebook"
              type = "text"
+             value={this.state.facebook}
+             onChange = {this.onChange}
+             errors = {this.state.errors.facebook}
              placeholder="Facebook URL"/>
              <OptionList
              linkName="fab fa-instagram"
              name = "instagram"
              type = "text"
+             value={this.state.instagram}
+             onChange = {this.onChange}
+             errors = {this.state.errors.instagram}
              placeholder="Instargram URL"/></div>
          return (
              <div className="create-profile">

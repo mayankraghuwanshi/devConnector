@@ -18,6 +18,7 @@ import addEducation from './Components/dashboard/addEducation'
 import addExperience from './Components/dashboard/addExperience'
 import editProfile from "./Components/dashboard/editProfile";
 import Profiles from './Components/profile/profiles'
+import Profile from './Components/profile/profile'
 
 if(localStorage.jwtToken){
     setAuthHeader(localStorage.jwtToken)
@@ -47,8 +48,9 @@ class App extends Component {
                   <PrivateRoute exact path = "/add-education" component = {addEducation}/>
                   <PrivateRoute exact path = "/add-experience" component = {addExperience}/>
                   <PrivateRoute exact path = "/edit-profile" component = {editProfile}/>
-                  <PrivateRoute exact path = "/profiles" component = {Profiles}/>
                       </Switch>
+                  <Route exact path = "/profiles" component = {Profiles}/>
+                  <Route exact path = "/profile/:handle" component = {Profile}/>
                   </div><Footer/></div>
               </Router>
         </Provider>

@@ -20,6 +20,7 @@ class editProfile extends Component {
             twitter:"",
             facebook : "",
             bio : "" ,
+            linkedin : " ",
             youtube : "",
             instagram : "",
             githubusername : "",
@@ -41,6 +42,8 @@ class editProfile extends Component {
             facebook:this.state.facebook,
             instagram:this.state.instagram,
             githubusername:this.state.githubusername,
+            youtube : this.state.youtube,
+            linkedin : this.state.linkedin,
             bio:this.state.bio}
         this.props.createProfile(newData , this.props.history)
 
@@ -67,7 +70,8 @@ class editProfile extends Component {
                website : profile.website,
                location : profile.location,
                twitter : profile.twitter,
-               acebook : profile.facebook,
+               facebook : profile.facebook,
+               linkedin : profile.linkedin,
                instagram : profile.instagram,
                githubusername : profile.githubusername,
                youtube : profile.youtube,
@@ -85,21 +89,30 @@ class editProfile extends Component {
                 linkName="fab fa-youtube"
                 type = "text"
                 name = "youtube"
+                value={this.state.youtube}
+                onChange = {this.onChange}
+                errors = {this.state.errors.youtube}
                 placeholder="YouTube Channel URL"/>
                 <OptionList
                     linkName="fab fa-linkedin"
                     name = "fab fa-linkedin"
                     type = "text"
+                    value={this.state.linkedin}
+                    onChange = {this.onChange}
                     placeholder="Linkedin URL"/>
                 <OptionList
                     linkName="fab fa-facebook"
                     name = "facebook"
                     type = "text"
+                    value={this.state.facebook}
+                    onChange = {this.onChange}
                     placeholder="Facebook URL"/>
                 <OptionList
                     linkName="fab fa-instagram"
                     name = "instagram"
                     type = "text"
+                    value={this.state.instagram}
+                    onChange = {this.onChange}
                     placeholder="Instargram URL"/></div>
         return (
             <div className="create-profile">
