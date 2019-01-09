@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {CLEAR_PROFILE, GET_ERROR, GET_PROFILE, PROFILE_LOADING, SET_CURRENT_USER} from "./type";
+import {CLEAR_PROFILE, GET_ERROR, GET_PROFILE , GET_PROFILES , PROFILE_LOADING, SET_CURRENT_USER} from "./type";
 import setAuthHeader from "../utils/setAuthHeader";
 
 export const addEducation =  (newEdu , history)=>dispatch=>{
@@ -70,6 +70,23 @@ export const getCurrentProfile = ()=>dispatch=>{
             payload: {}
         }))
 }
+
+export const getAllProfiles = ()=>dispatch=>{
+    dispatch({
+        type : PROFILE_LOADING
+    })
+    axios.get('http://localhost:3500/api/profile/all')
+        .then(res=>dispatch({
+            type: GET_PROFILES,
+            payload : res.data
+        }))
+        .catch(err=>dispatch({
+            type : GET_PROFILES,
+            payload: {}
+        }))
+}
+
+
 export const createProfile = (newData , history)=>dispatch=>{
     axios.post('http://localhost:3500/api/profile' , newData)
         .then(res=>history.push('/dashboard') )
