@@ -39,8 +39,8 @@ class Profile extends Component {
                                     </div>
                                 </div>
                                 {ProfileHeaderBox}
-                                {ProfileAboutBox}
-                                {ProfileCredBox}
+                                {ProfileAboutBox }
+                                {ProfileCredBox  }
 
                         </div>
                     </div>

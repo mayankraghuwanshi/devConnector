@@ -62,7 +62,6 @@ class Register extends Component {
                                     value = {this.state.name}
                                     placeholder = "Name"
                                     error = {errors.name}
-                                    info  = "Enter your Full Name"
                                 />
                                 <InputTextField
                                      type = "email"

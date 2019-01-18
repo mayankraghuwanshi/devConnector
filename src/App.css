@@ -4,7 +4,7 @@ img {
 
 .landing {
   position: relative;
-  background: url('./img/showcase.jpg') no-repeat;
+  background: url('https://www.bestconsent.com/wp-content/uploads/2016/05/best-consent-login-background.jpg') no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;

@@ -19,6 +19,7 @@ import addExperience from './Components/dashboard/addExperience'
 import editProfile from "./Components/dashboard/editProfile";
 import Profiles from './Components/profile/profiles'
 import Profile from './Components/profile/profile'
+import Feed from './Components/post/Feed'
 
 if(localStorage.jwtToken){
     setAuthHeader(localStorage.jwtToken)
@@ -42,6 +43,7 @@ class App extends Component {
                   <div className="container">
                   <Route exact path = "/login" component = {Login} />
                   <Route exact path = "/register" component = {Register} />
+                  <Route exact path = "/feed" component = {Feed} />
                       <Switch>
                   <PrivateRoute exact path = "/create-profile" component = {CreateProfile} />
                   <PrivateRoute exact path = "/dashboard" component = {Dashboard}/>

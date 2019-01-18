@@ -5,7 +5,7 @@ import jwt_decode from 'jwt-decode'
 import {clearProfile} from "./profileAction";
 
 export const registerUser = (userData)=>(dispatch)=>{
-    axios.post('http://localhost:3500/api/users/register', userData)
+    axios.post('/api/users/register', userData)
         .then(data=>{
             window.location.href='/login'
         })
@@ -17,7 +17,7 @@ export const registerUser = (userData)=>(dispatch)=>{
 }
 
 export const loginUser = userData => dispatch=>{
-    axios.post('http://localhost:3500/api/users/login' , userData)
+    axios.post('/api/users/login' , userData)
         .then(res=>{
 
             //set to variable

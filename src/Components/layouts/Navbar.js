@@ -9,13 +9,33 @@ class Navbar extends Component{
        const { isAuthenticated , user } = this.props.auth
        const authLink = (
            <ul className="navbar-nav ml-auto">
-               <a href="#" className="nav-item">
-                   <img src={user.avatar} style={{width : "25px" , margin : "5px 5px 0 0"}}></img>
-               </a>
                <li className="nav-item">
-                   <Link onClick={this.props.logoutUser.bind(this)} className="nav-link" to="/login">Logout</Link>
+                   <Link className="nav-link" to="/feed">
+                       Post Feed
+                   </Link>
+               </li>
+               <li className="nav-item">
+                   <Link className="nav-link" to="/dashboard">
+                       Dashboard
+                   </Link>
+               </li>
+               <li className="nav-item">
+                   <Link className="nav-link" to="/login" onClick={this.props.logoutUser}>
+                       <img className="rounded-circle" style={{width: "25px" , marginRight: "5px"}}
+                            src={user.avatar}
+                            alt="" title="You must have a Gravatar connected to your email to display an image"/> Logout
+                   </Link>
                </li>
            </ul>
+
+
+
+
+
+
+
+
+
        )
 
         const guestLink = (
