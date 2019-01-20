@@ -39,7 +39,7 @@ app.use('/api/posts', posts);
 
 
     app.use(express.static(path.join(__dirname,"client","build")))
-    app.get("*" , (req , res)=>{
+    app.get("/*" , (req , res)=>{
         const index = path.join(__dirname , "client" , "index.html")
         res.sendFile(index);
     })
