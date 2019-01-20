@@ -37,13 +37,13 @@ app.use('/api/profile', profile);
 app.use('/api/posts', posts);
 
 
-
-    app.use(express.static(path.join(__dirname, "client","build")))
-    app.get("*" , (req , res)=>{
-        const index = path.join(__dirname , "client" , "index.html")
+//if(process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, "client", "build")))
+    app.get("*", (req, res) => {
+        const index = path.join(__dirname, "client","build", "index.html")
         res.sendFile(index);
     })
-
+//}
 
 const port = process.env.PORT || 3500;
 
