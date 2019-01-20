@@ -1,6 +1,24 @@
 img {
   width: 100%;
 }
+.box{
+  width: 100%;
+  padding: 20px 10px 20px 10px;
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+.bg-gradient{
+  background-image: linear-gradient(to right , #16222A , #3A6073);
+  font-size: 15px;
+}
+.min-h{
+
+  minimum-height : 72vh;
+}
+
+.h-72{
+  height: 72vh;
+}
 
 .landing {
   position: relative;

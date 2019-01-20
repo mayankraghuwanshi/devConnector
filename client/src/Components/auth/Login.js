@@ -46,8 +46,9 @@ class Login extends Component {
 
     render(){
         const {errors} = this.state
-        return (<div className="login ">
+        return (<div className="login">
                 <div className="container">
+                    <div className="box">
                     <div className="row">
                         <div className="col-md-8 m-auto">
                             <h1 className="display-4 text-center">Log In</h1>
@@ -72,7 +73,7 @@ class Login extends Component {
                                 <input type="submit" className="btn btn-info btn-block mt-4"/>
                             </form>
                         </div>
-                    </div>
+                    </div></div>
                 </div>
             </div>
 

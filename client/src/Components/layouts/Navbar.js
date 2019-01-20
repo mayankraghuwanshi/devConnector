@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {logoutUser} from '../../Actions/authAction'
 
+
 class Navbar extends Component{
     render(){
        const { isAuthenticated , user } = this.props.auth
@@ -51,9 +52,9 @@ class Navbar extends Component{
 
        return (
            <div>
-               <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
+               <nav className="navbar navbar-expand-sm navbar-dark bg-gradient mb-4">
                    <div className="container">
-                       <Link className="navbar-brand" to="landing.html"></Link>
+                       <Link className="navbar-brand" to="/"><img src="https://ltstream.com/wp-content/uploads/2015/08/LS-Connect-Logo.png" style={{height: "40px", width: "100px"}}/></Link>
                        <button className="navbar-toggler" type="button" data-toggle="collapse"
                                data-target="#mobile-nav">
                            <span className="navbar-toggler-icon"></span>
