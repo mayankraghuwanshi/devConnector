@@ -58,6 +58,7 @@ class Feed extends Component{
             let postBox = post.posts.map(item =><PostItem
                 post = {item}
                 user = {auth.user}
+                funShow ={true}
                 />
             )
             return <div>

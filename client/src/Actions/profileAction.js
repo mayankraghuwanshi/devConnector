@@ -101,6 +101,21 @@ export const getProfileByHandle = (handle)=>dispatch=>{
         }))
 }
 
+export const getProfileByUserId = (userId)=>dispatch=>{
+    dispatch({
+        type : PROFILE_LOADING
+    })
+    axios.get(`/api/profile/user/${userId}`)
+        .then(res=>dispatch({
+            type: GET_PROFILE,
+            payload : res.data
+        }))
+        .catch(err=>dispatch({
+            type : GET_PROFILE,
+            payload: null
+        }))
+}
+
 
 
 

@@ -23,7 +23,7 @@ class Dashboard extends Component{
         }
         else{
             if(Object.keys(profile).length>0){
-                content = <div><p className="lead text-muted">Welcome {user.name}</p>
+                content = <div><p className="lead text-muted">Welcome <Link to={`/profile/user/${user.id}`}>{user.name}</Link></p>
                     <div className="btn-group mb-4" role="group">
                         <Link to="/edit-profile" className="btn btn-light">
                             <i className="fas fa-user-circle text-info mr-1"></i> Edit Profile</Link>

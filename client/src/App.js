@@ -19,7 +19,9 @@ import addExperience from './Components/dashboard/addExperience'
 import editProfile from "./Components/dashboard/editProfile";
 import Profiles from './Components/profile/profiles'
 import Profile from './Components/profile/profile'
+import UserProfile from './Components/profile/userprofile'
 import Feed from './Components/post/Feed'
+import Post from './Components/post/Post'
 
 if(localStorage.jwtToken){
     setAuthHeader(localStorage.jwtToken)
@@ -33,6 +35,9 @@ if(localStorage.jwtToken){
 
 
 class App extends Component {
+    componentWillMount() {
+        document.title = 'Connector'
+    }
   render()
   {    return (
         <Provider store = {store}>
@@ -50,9 +55,11 @@ class App extends Component {
                   <PrivateRoute exact path = "/add-education" component = {addEducation}/>
                   <PrivateRoute exact path = "/add-experience" component = {addExperience}/>
                   <PrivateRoute exact path = "/edit-profile" component = {editProfile}/>
+                          <PrivateRoute exact path = "/post/:id" component = {Post}/>
                       </Switch>
                   <Route exact path = "/profiles" component = {Profiles}/>
                   <Route exact path = "/profile/:handle" component = {Profile}/>
+                  <Route exact path = "/profile/user/:userId" component = {UserProfile}/>
                   </div><Footer/></div>
               </Router>
         </Provider>
