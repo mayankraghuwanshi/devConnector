@@ -11,8 +11,13 @@ class Navbar extends Component{
        const authLink = (
            <ul className="navbar-nav ml-auto">
                <li className="nav-item">
+                   <Link className="nav-link" to="/profiles">
+                       Profiles
+                   </Link>
+               </li>
+               <li className="nav-item">
                    <Link className="nav-link" to="/feed">
-                       Post Feed
+                       Feeds
                    </Link>
                </li>
                <li className="nav-item">
@@ -54,7 +59,7 @@ class Navbar extends Component{
            <div>
                <nav className="navbar navbar-expand-sm navbar-dark bg-gradient mb-4">
                    <div className="container">
-                       <Link className="navbar-brand" to="/"><img src="https://ltstream.com/wp-content/uploads/2015/08/LS-Connect-Logo.png" style={{height: "40px", width: "100px"}}/></Link>
+                       {/*<Link className="navbar-brand" to="/"><img src="https://ltstream.com/wp-content/uploads/2015/08/LS-Connect-Logo.png" style={{height: "40px", width: "100px"}}/></Link>*/}
                        <button className="navbar-toggler" type="button" data-toggle="collapse"
                                data-target="#mobile-nav">
                            <span className="navbar-toggler-icon"></span>
